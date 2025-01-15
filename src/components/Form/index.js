@@ -1,7 +1,9 @@
 import TextField from "../TextField"
 import "./Form.css"
+import DropDown from "../DropDown"
 
 const Form = () => {
+    const genre = ["Ação", "Ficção", "Desenvolvimento Pessoal", "Romance", "Comédia", "Aventura"]
     return (
         <section className="forms">
             <form>
@@ -9,6 +11,7 @@ const Form = () => {
                 <TextField label="Nome" placeholder="Digite o seu nome" />
                 <TextField label="Cargo" placeholder="Digite o seu cargo" />
                 <TextField label="Imagem" placeholder="Digite o endereço da sua imagem" />
+                <DropDown label="Gênero" items={genre}/>
             </form>
         </section>
     ) 
