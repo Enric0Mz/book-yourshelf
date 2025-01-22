@@ -6,7 +6,6 @@ import { useState } from "react"
 
 
 const Form = (props) => {
-    const genres = ["Ação", "Ficção", "Desenvolvimento Pessoal", "Romance", "Comédia", "Aventura"]
 
     const [name, setName] = useState('')
     const [author, setAuthor] = useState('')
@@ -18,7 +17,6 @@ const Form = (props) => {
         props.onBookCreate({
             name, author, image, genre
         })
-        console.log("O form foi submetido => ", name, author, image, genre)
     }
     
     return (
@@ -31,7 +29,7 @@ const Form = (props) => {
                 <DropDown 
                     mandatory={true} 
                     label="Gênero" 
-                    items={genres}
+                    items={props.genresNames}    
                     value={genre}
                     onChange={value => setGenre(value)}
                     />
