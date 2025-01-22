@@ -53,7 +53,7 @@ function App() {
     <div className="App">
       <Banner />
       <Form genresNames={genres.map(genre => genre.name)} onBookCreate={toNewBookCreate}/>
-      {genres.map(genre => <Genre key={genre.name} name={genre.name} mainColor={genre.mainColor} secondaryColor={genre.secondaryColor}/>)}
+      {genres.map(genre => <Genre key={genre.name} name={genre.name} mainColor={genre.mainColor} secondaryColor={genre.secondaryColor} books={books.filter(book => book.genre === genre.name)}/>)}
     </div>
   );
 }

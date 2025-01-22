@@ -17,6 +17,10 @@ const Form = (props) => {
         props.onBookCreate({
             name, author, image, genre
         })
+        setName('')
+        setAuthor('')
+        setImage('')
+        setGenre('')
     }
     
     return (
